@@ -23,7 +23,7 @@ class SQLiteAuthPlugin(BaseAuthPlugin):
 				cursor = conn.cursor()
 				cursor.execute(f"""
 				SELECT password FROM MQTT_authmqtt WHERE username = '{username}'
-				""")
+				""")# EDIT WITH YOUR QUERY TO GET THE PASSWORD
 				if password == cursor.fetchone()[0]:
 					return True
 		return False
@@ -72,11 +72,11 @@ class SQLiteTopicAccessControlPlugin(BaseTopicPlugin):
 					cursor = conn.cursor()
 					cursor.execute(f"""
 					SELECT id FROM MQTT_authmqtt WHERE username = '{username}'
-					""")
+					""")# EDIT WITH YOUR QUERY TO GET THE USER ID
 					id = cursor.fetchone()[0]
 					cursor.execute(f"""
 					SELECT topic FROM MQTT_topic WHERE mqtt_user_id = '{id}'
-					""")
+					""")# EDIT WITH YOUR QUERY TO GET THE USER'S ALLOWED TOPICS
 					for row in cursor.fetchall():
 						allowed_topic = row[0]
 						if self.topic_ac(req_topic, allowed_topic):
