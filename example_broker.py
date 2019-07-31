@@ -13,7 +13,7 @@ config = {
         },
     },
     'sys_interval': 10,
-    'sqlite-database': 'SQLite3 database location',
+    'sqlite-database': 'YOUR SQLITE3 DATABASE LOCATION',
     'auth': {
         'allow-anonymous': False,
         'plugins': [
