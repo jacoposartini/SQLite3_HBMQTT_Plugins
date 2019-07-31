@@ -1,6 +1,6 @@
 # SQLite3_HBMQTT_Plugins
 # setup
-it is important that before installing you modify the queries in the file __init__.py so that the broker queries the correct tables and the correct columns!
+it is important that before installing you modify the queries in the file ```__init__.py``` so that the broker queries the correct tables and the correct columns!
 # install
 To install, simply run the command:
 ```
@@ -27,4 +27,4 @@ To execute an example script, run the command:
 ```
 	python3 example_broker.py
 ```
-In case of bugs please contact me.
+# In case of bugs please contact me.
