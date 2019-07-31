@@ -27,4 +27,4 @@ To execute an example script, run the command:
 ```
 	python3 example_broker.py
 ```
-# In case of bugs please contact me.
+# in case of bugs please contact me.
