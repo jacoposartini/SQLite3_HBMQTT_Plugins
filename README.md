@@ -1,4 +1,8 @@
 # SQLite3_HBMQTT_Plugins
+# download
+```
+git clone https://github.com/jacoposartini/SQLite3_HBMQTT_Plugins.git
+```
 # setup
 it is important that before installing you modify the queries in the file ```__init__.py``` so that the broker queries the correct tables and the correct columns!
 ```
