@@ -1,6 +1,20 @@
 # SQLite3_HBMQTT_Plugins
 # setup
 it is important that before installing you modify the queries in the file ```__init__.py``` so that the broker queries the correct tables and the correct columns!
+```
+	cursor.execute(f"""
+	SELECT password FROM MQTT_authmqtt WHERE username = '{username}'
+	""")# EDIT WITH YOUR QUERY TO GET THE PASSWORD
+				
+	cursor.execute(f"""
+	SELECT id FROM MQTT_authmqtt WHERE username = '{username}'
+	""")# EDIT WITH YOUR QUERY TO GET THE USER ID
+
+	cursor.execute(f"""
+	SELECT topic FROM MQTT_topic WHERE mqtt_user_id = '{id}'
+	""")# EDIT WITH YOUR QUERY TO GET THE USER'S ALLOWED TOPICS
+```
+
 # install
 To install, simply run the command:
 ```
