@@ -1,9 +1,9 @@
 # SQLite3_HBMQTT_Plugins
-# download
+## download
 ```
 git clone https://github.com/jacoposartini/SQLite3_HBMQTT_Plugins.git
 ```
-# setup
+## setup
 it is important that before installing you modify the queries in the file ```__init__.py``` so that the broker queries the correct tables and the correct columns!
 ```
 	cursor.execute(f"""
@@ -19,12 +19,12 @@ it is important that before installing you modify the queries in the file ```__i
 	""")# EDIT WITH YOUR QUERY TO GET THE USER'S ALLOWED TOPICS
 ```
 
-# install
+## install
 To install, simply run the command:
 ```
 	python3 setup.py install
 ```
-# run
+## run
 To use the plugin use the following configuration:
 ```
 	'sqlite-database': 'YOUR SQLITE3 DATABASE LOCATION',
@@ -45,4 +45,4 @@ To execute an example script, run the command:
 ```
 	python3 example_broker.py
 ```
-# in case of bugs please contact me.
+## in case of bugs please contact me.
