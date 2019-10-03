@@ -77,6 +77,13 @@ class SQLiteTopicAccessControlPlugin(BaseTopicPlugin):
 					cursor.execute(f"""
 					SELECT topic FROM MQTT_topic WHERE mqtt_user_id = '{id}'
 					""")# EDIT WITH YOUR QUERY TO GET THE USER'S ALLOWED TOPICS
+					
+					"""
+					SELECT MQTT_topic.topic 
+					FROM MQTT_authmqtt, MQTT_topic 
+					WHERE MQTT_authmqtt.username = '{username}'
+					AND MQTT_topic.mqtt_user_id = MQTT_authmqtt.id
+					"""
 					for row in cursor.fetchall():
 						allowed_topic = row[0]
 						if self.topic_ac(req_topic, allowed_topic):
